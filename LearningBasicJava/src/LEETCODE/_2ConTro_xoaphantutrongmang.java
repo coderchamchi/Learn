@@ -1,11 +1,16 @@
 package LEETCODE;
 
+import DataStructureAndAlgorithm_Advanced.SortingAlgorithm;
+
+
 import java.util.Arrays;
 
 public class _2ConTro_xoaphantutrongmang {
     public static void main(String[] args){
         int[] nums = {1,2,3,4,5,4,8};
+
         Arrays.sort(nums);
+
         int lennums = nums.length;
         int x = 4;
         int k = 0;
