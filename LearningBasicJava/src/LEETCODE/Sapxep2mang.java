@@ -14,8 +14,8 @@ public class Sapxep2mang {
     private static void merge(int[] n1, int m, int[] n2){
         for(int ai : n2)
         {
-            chenphantuvaomang(ai, n1, m);
-                m++;
+            chenphantuvaomang(ai, n1, m); //ai là số được lấy từ từng phần tử trong mảng n2, n1 là mảng để đối chiếu so sánh
+                m++; //sau khi chèn được thêm một th rồi là m tăng thêm 1 đơn vị
         }
     }
     private static void chenphantuvaomang(int x, int[] a, int m){
@@ -23,6 +23,7 @@ public class Sapxep2mang {
         for (int k = 0; k < m; k++){
             if(a[k] > x) {
                 timduocK = true;
+                // khi tìm được vị trí k thỏa mãn thì đẩy các số từ vị trí k đó về sau 1 đơn vị
                 for (int i = m - 1; i >= k; i--) {
                     a[i + 1] = a[i];
                 }

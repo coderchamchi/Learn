@@ -15,11 +15,11 @@ public class _2ConTro_chenphantuvaomang {
         int j = n-1;
         int k = m+n-1;
         while(k >= 0){
-            if(j < 0) {
+            if(j < 0){
                 n1[k] = n1[i];
                 i--;
             }
-            else if (i < 0) {
+            else if (i < 0){
                 n1[k] = n2[j];
                 j--;
             }

@@ -1,6 +1,6 @@
 package LEETCODE;
 
-public class Ex1 {
+public class FindNumberswithEvenNumberofDigits {
     public static void main(String[] args){
 
         StringBuilder stringBuilder = new StringBuilder();
