@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: #eb2c2c;
+    font-size: 60px;
+}
+h3{
+    color: #eb2c2c;
+    font-size: 30px;
+}
+button{
+    color: #0b0b0b;
+    font-size: 30px;
+}
+.third-heading{
+    color: black;
+    font-size: 35px;
+}
+
+:root{
+    --text-color: red;
+}
+
+h1.color#title{
+    color: var(--text-color);
+}
+
