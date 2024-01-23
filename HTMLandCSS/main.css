@@ -18,6 +18,10 @@ h3{
     color: #eb2c2c;
     font-size: 3rem;
 }
+h5{
+    color: gray;
+    font-size: 1.5rem;
+}
 button{
     color: #0b0b0b;
     font-size: 3rem;
@@ -29,23 +33,129 @@ button{
 .RefundGaming#heading1
 {   
     /* font-weight: bold; */
-    margin: 1.2rem;
-    padding: 0.5rem;
-    font-size: 4rem;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* padding: auto; */
+    font-size: 4.3rem;
+    width: 30rem;
+    text-align: center;
     
 }
+.test{
+    padding: 2rem; 
+    color: blueviolet;
+    width: 10rem;
+    height: 2.5rem;
+}
 .boxed{
-    margin: 1rem;
-    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem; 
     width: 30rem;
     height: 20rem;
     background-image: linear-gradient(to right bottom, red 30%,black 50%);
-}  
+}
+.button{
+    margin-top: 5rem;
+}
+.boxbentronglienke{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+    height: 20rem;
+    color: rgb(19, 18, 18);
+    align-items: center;
+    /* float: left; */
+    /* float: left là để những element chịu sự ảnh hưởng bị đẩy sang bên trái hết */
+}
+.box1{
+    background-color: #eb2c2c;
+    width: 7rem;
+    text-align: center;
+}
+.box2{
+    background-color: blue;
+    width: 7rem;
+    text-align: center;
+}
+.box3{
+    background-color: burlywood;
+    width: 7rem;
+    text-align: center;
+}
+.box4{
+    background-color: coral;
+    width: 7rem;
+    text-align: center;
+}
+
+.cangiua{
+    /* LƯU Ý những thứ như PADDING, MARGIN, BORDER đều phải chạy CODE rồi F12 để check.
+    chạy code rồi hiểu code chưa chắc hiểu đúng BẢN CHẤT */
+    margin-top: 1rem;
+    /* đẩy khối lên trên 1 rem */
+    width: 20rem;
+    height: 5rem;
+    background-image: linear-gradient(to right bottom, red 30%,black 50%);
+    /* tạo một border bọc ngoài thằng padding với độ rộng 1rem, nét liền solid, màu xám */
+    border-top-width: 0.7rem;
+    border-right-width: 1.2rem;
+    border-bottom-width: 0.7rem;
+    border-left-width: 1.2rem;
+    border-style: solid;
+    border-color: gray;
+    box-sizing: border-box;
+    /* box-sizing: border-box; sử dụng cái này để nếu mà có thêm padding, border thì cuối cùng cả phần tử bọc hết nó vẫn bằng width
+    là 20rem và height là 5rem, sau này có maintain thì cũng chỉ cần sửa width với height, không cần phải sửa hết cả padding, border,..
+     */
+
+}
+/* sử dụng biến trong CSS */
 :root{
     --text-color: red;
 }
 
 h1.color#title{
     color: var(--text-color);
+    text-align: center;
+    /* ở đây tại sao lại dùng text-align mà ko dùng căn giữa
+    style="display: flex; justify-content: center;" như bên html, tại vì cái này chỉ dùng khi căn cả ngang và dọc, đây mình chỉ cần 
+    ngang để vào chính giữa thôi, hay là Khi có nhiều phần tử con và muốn căn giữa chúng (xem ví dụ ở dưới thẻ div có class là 
+    boxbentronglienke) hay là Khi muốn chia đều không gian còn lại xung quanh các phần tử con (xem ví dụ tiếp theo) */
+}
+div.luaga#assign{
+    text-align: center;
+}
+#assignButton{
+    margin-top: 0.5rem;
+    border: #0b0b0b;
+    border-style: solid;
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+h6.author#note{
+    background-image: linear-gradient(to right bottom, #00aefd , #ffa400);
+    margin-top: 2rem;
+    margin-left: 130rem;
+    font-size: 3rem;
+    font-weight: bold; 
+    /* font-weight: bold; là để in đậm */
+    display: inline-block;
+    /* display: inline-block là để độ dài của phần tử (bao gồm cả padding và border) chỉ ngang với text thôi */
+    color: transparent;
+    /* color: transparent; cái này để làm nội dung trong suốt thì phần ở dưới nó mới đổ màu cho text được, cứ comment lại là thấy
+    mặc dù ở dòng dưới là đổ màu rồi nhưng nó vẫn là màu đen, không thành màu background-image được */
+    -webkit-background-clip: text ;
+    background-clip: text;
+    /* phần này là để đổ màu, ở đây đang thực hiện đổ màu nền từ background-image cho màu của text, có nhiều loại khác như đổ màu 
+    cho padding là background-clip: paddingbox hay border là background-clip: borderbox hay content là background-clip:contentbox;
+    nếu mà đổ màu không phải cho text thì không cần phải color: transparent*/
+    
+
+
+
 }
 

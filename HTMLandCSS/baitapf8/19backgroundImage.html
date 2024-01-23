@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">  <!-- hỗ trợ tiếng việt ở website, không có cái này thì viết nội dung ở body có thể gặp lỗi -->
+        <title>F8-shop</title>
+        <style>
+            html,body{
+                margin: 0;
+            }
+            .header{
+                width: 100%;
+                height: 100vh;
+                background-image:
+                linear-gradient(0, rgba(0, 255, 255, 0.5), rgba(243, 243, 235, 0.5)),
+                 /* tạo một dải màu chuyển đều đặn linear-gradient 0 là hướng chuyển 0 độ, rgba là màu trong suốt có mã màu 
+                 0, 255, 255 với số 0.5 cuối là độ trong suốt 0.5 (cái này dao động từ 0 đến 1), tương tự với phần rgba sau, 
+                 dải màu nên phải có 2 màu nên có 2 cái rgba thôi */
+                url(https://i1-thethao.vnecdn.net/2023/11/14/1789759643-1-1699915496-6749-1699915539.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=C-iiK43Hh3MkFx3IHuUwzQ);
+                /* background-size: contain; */
+                /* Thuộc tính này sẽ cố gắng làm cho hình nền vừa vặn vào kích thước của phần tử mà không làm thay đổi tỉ lệ khung hình của hình nền. 
+                Nếu hình nền có kích thước lớn hơn kích thước của phần tử, nó sẽ được co dãn hoặc thu nhỏ sao cho toàn bộ hình nền vẫn nằm trong phần tử. */
+                /* background-size: cover; */
+                /* Ngược lại, thuộc tính này sẽ làm cho hình nền vừa vặn với kích thước của phần tử mà không làm biến đổi tỉ lệ khung hình của hình nền. 
+                Nếu hình nền có kích thước nhỏ hơn kích thước của phần tử, nó sẽ được phóng to hoặc thu nhỏ sao cho nó vừa vặn vào phần tử mà không bị lạc lõng. */
+                background-size: 150px, 200px;
+                /* chỉnh lại kích thước ảnh 150px là chiều ngang, 200px là chiều dọc*/
+                /* background-repeat: no-repeat; */
+                /* background là nó có thuộc tính mặc định là lặp lại nên nếu không muốn lặp thì dùng background-repeat: no repeat;
+                nếu muốn lặp lại về chiều ngang thôi thì repeat-x, còn dọc thì repeat-y */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+
+        </div>
+    </body>
+</html>

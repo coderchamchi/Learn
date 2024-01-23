@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">  <!-- hỗ trợ tiếng việt ở website, không có cái này thì viết nội dung ở body có thể gặp lỗi -->
+        <title>F8-shop</title>
+        <style>
+            html, body{
+                padding: 0;
+                box-sizing: border-box;
+                margin: 0;
+            }
+            /* .box{
+                text-align: center;
+            } */
+            /* trường hợp chỉ có 1 th con trong th cha là mỗi h3 thì mới dùng text-align cho th h3, còn có h2 h1 ở trong box nữa thì để
+            text-align ở trong thẻ box để nó tự căn giữa hết cho mấy th con, cái này căn được mỗi chiều ngang */
+            /* .box{ 
+                height: 100px;
+                background-color: yellow;
+                display: flex;
+                align-items: center;
+                justify-content: center;  
+            /* } */
+                /* align-items: center là để căn giữa dọc, justify-content: center là để căn giữa chiều ngang, với điều kiện phải có 
+                thêm display: flex;*/
+            .box{
+                height: 100px;
+                background-color: yellow;
+                position: relative;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            h3{
+                position: absolute;
+                /* position absolute để tự do di chuyển trong th cha là box */
+                top: 50%;
+                /*  */
+                transform: translateY(-50%);
+                margin-top: 0px;
+                margin-bottom: 0px;
+                /* không  */
+            }
+
+            
+                            
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h3>CENTER ME</h3>
+        </div>
+    </body>
+</html>

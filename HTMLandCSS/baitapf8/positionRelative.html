@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">  <!-- hỗ trợ tiếng việt ở website, không có cái này thì viết nội dung ở body có thể gặp lỗi -->
+        <title>F8-shop</title>
+        <style>
+            html,body{
+                margin: 0;
+            }
+            h1{
+                position: relative;
+                top: 100px;
+                /* margin-top: 100px; */
+                /* phần này là căn để đẩy khối h1 xuống dưới và đè lên cả các phần tử trong khối ul, nếu không có relative
+                thì sẽ đẩy hết xuống (nếu dùng margin-top) chứ không phải đẩy mỗi h1 như này */
+            }
+            .box{
+                width: 100%;
+                height: 120px;
+                background-color: #333;
+                position: relative;
+            }
+            .box-child{
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+                position: absolute;
+                /* dùng absolute để tự do di chuyển vị trí trong vùng của thẻ cha, ở đẩy thẻ cha là khối div có class box, lưu ý là th cha
+                phải có thuộc tính là position: gì đó thì mới tính là cha, không có th nào hết thì nó sẽ coi trình duyệt là cha */
+                top: 0;
+                right: 0;
+                /* vì khối div này có kích thước nhỏ nên không thể top right left bottom được đâu, vì top right bottom left mà bằng 0
+                hết thì nó bằng luôn kích thước của th trình duyệt rồi, reng được mà được, hén phải nhỏ hơn thẻ cha chứ */
+            }
+            ul{
+                height: 2000px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="box">
+                <div class="box-child"></div>
+            </div>
+            <h1> Position</h1>
+            <ul>
+                <li>Relative</li>
+                <!-- Vị trí tương đối, không phụ thuộc vào đối tượng nào ở trình duyệt cả, nó sẽ lấy chính nó(lấy vị trí ban đầu nó đứng)
+                    làm gốc tọa độ -->
+                <li>Absolute</li>
+                <!-- Vị trí tuyệt đối, phụ thuộc vào thẻ cha gần nhất có thuộc tính position để làm gốc tọa độ, xem ví dụ từ class 
+                    box và box-child -->
+                <li>Fixed</li>
+                <!-- Vị trí phụ thuộc vào khung trình duyệt -->
+                <li>Sticky</li>
+                <!-- Vị trí bám dính, phụ thuộc vào khung trình duyệt, không nên dùng vì ít đc support-->
+            </ul>
+        </div>
+    </body>
+</html>

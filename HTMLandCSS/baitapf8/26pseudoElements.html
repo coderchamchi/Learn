@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">  <!-- hỗ trợ tiếng việt ở website, không có cái này thì viết nội dung ở body có thể gặp lỗi -->
+        <title>F8-shop</title>
+        <style>
+            html,body{
+                margin: 0;
+            }
+            .box{
+                width: 100%;
+                height: 300px;
+                background: rgb(190, 127, 157);
+            }
+            .box::before{
+                /* before là ở trước, bấm kiểm tra để check var */
+                display: block;
+                content: "hello my fen";
+                color: gold;
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+                
+            }
+            .box::after{
+                /* after là ở sau */
+                display: block;
+                /* tại sao .box nó đã được khai báo là thẻ div rồi mà bây giờ phải khai báo thêm là block, nó tương tự mà pk?
+                câu trả lời là đéo, vì đây đang khai báo ::before là khai báo giả, nên phải define lại thêm 1 lần thì mới hiển thị là
+                một khối được */
+                /* content: ""; */
+                /* còn content thì mặc dù khai báo rỗng nhưng đã khai báo giả thì đều phải có */
+                content: "how r u?";
+                /* còn muốn để giá trị vào cũng được nhé */
+                color: aqua;;
+                /* khai báo màu cho chữ  */
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+            }
+            h1::first-letter{
+                /* first-letter sẽ tác động lên chữ cái đầu trong h1 */
+                color: red;
+                font-size: 5rem;
+            }
+            h2::first-line{
+                /* first-line thì nếu trong một đoạn có 2 dòng thì nó chỉ tác động lên dòng đầu tiên */
+                color: red;
+                font-size: 4rem;
+            }
+            h3::selection{
+                /* nó sẽ hiển thị màu khi kích chuột phải đè vào và kéo như khai báo ở dưới */
+                background-color: rgb(241, 215, 149);
+                color: #fff;
+                /* kéo vào thì chữ nó hiện thành màu trắng, không còn màu đen nữa */
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <ul>những dòng này</ul>
+            <ul>là để check var</ul>
+            <ul>before và after</ul>
+        </div>
+        
+        <h1>Pseudo Classes</h1>
+        <h2>dòng thứ nhất <br /> dòng thứ 2</h2>
+        <h3>kích chuột phải đè vào và kéo từ đầu tới hết dòng này là hiểu</h3>
+        <ul>
+            <li>::before</li>
+            <li>::after</li>
+            <li>::first-letter</li>
+            <li>::first-line</li>
+            <li>::selection</li>
+        </ul>
+        
+    </body>
+</html>

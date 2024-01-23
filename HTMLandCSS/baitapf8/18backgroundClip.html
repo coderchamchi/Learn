@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">  <!-- hỗ trợ tiếng việt ở website, không có cái này thì viết nội dung ở body có thể gặp lỗi -->
+        <title>F8-shop</title>
+        <style>
+            html,body{
+                margin: 0;
+            }
+            .header{
+                width: 500px;
+                height: 500px;
+                background-image: url(https://fullstack.edu.vn/assets/images/f8_avatar.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                border: 20px dashed purple;
+                padding: 20px;
+                /* box-sizing: border-box; */
+                background-clip: border-box ;
+                /* với clip thì nếu mà để border là dashed thì ở đây clip không đổ màu lên đó được, dùng origin mới đc */
+                /* background-origin: border-box; */
+                /* origin nó sẽ để cho hình nền đổ từ border nếu là border-box( đổ từ có nghĩa là đổ full cả border nữa) tương tự với TH
+                khác như padding với content */
+                /* thử comment 1 trong 2 clip và origin để thấy sự khác biệt của cả 2 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header"></div>
+    </body>
+</html>

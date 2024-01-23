@@ -23,7 +23,23 @@
                 color: #0e100e;
                 font-size: 30px;
             }
-            
+            .boxed::after{
+                content: attr(data-title);
+                color: red;
+                
+                /* Dùng phần này là muốn lấy luôn biến inline title ở ngay thẻ div để khi mình rê chuột vào thì hiển thị lên nội dung 
+                Đây là box RefundGaming, tác dụng tới dòng <div class="boxed" title="Đây là box RefundGaming" ></div>
+                */
+            }
+            a::after{
+                content: " ( "attr(href)" )";
+                color: #eb2c2c;
+            }
+            /* để hiểu dòng này, trước tiên nó có tác dụng hiển thị luôn phần https://fullstack.edu.vn/ ở sau phần Tới trang học lập trình 
+            của F8, nó liên quan đến phần nội dung body ở dưới là dòng (<a href="https://fullstack.edu.vn/">Tới trang học lập trình của F8</a>).
+            Giả sử sau này chúng ta đổi đi domain, không phải là https://fullstack.edu.vn/ mà là gì đó khác thì cái phần hiển thị ở sau dòng 
+            Tới trang học lập trình của F8 (https://fullstack.edu.vn/) nó cũng sẽ tự động đổi theo, thuận lợi cho maintain, đó là lí do dùng 
+            attr, còn a::after thì after ở đây là nó sẽ luôn được hiển thị ở sau cùng */
         </style>
     </head>
     <!-- 1. h1 -> h6 ~ heading
@@ -40,15 +56,35 @@
         <link rel="stylesheet" href="main.css"> 
         <div>
             <h1 id="heading1" class="RefundGaming">
-                Refund Gaming
+                Refund Gaming 
             </h1>
-            <div class="boxed"></div>
-            <button>
-                Đăng nhập
-            </button>
-            <button>
-                Đăng ký
-            </button>
+            <div class="boxed" title="Đây là box RefundGaming" ></div>
+
+            <div style="display: flex; justify-content: center;">
+                <div class="cangiua">
+                </div>
+                <!-- Nội dung cần căn giữa, dùng inline chứ không dùng Css như refund gaming -->
+            </div>
+            <div class="boxbentronglienke" style="display: flex; justify-content: space-around;">
+                <!-- style="display: flex; justify-content: space-around;" để chia đều không gian trong thẻ cha cho các thẻ con -->
+                <div class="box1">box 1</div>
+                <div class="box2">box 2</div>
+                <div class="box3">box 3</div>
+                <div class="box4">box 4</div>
+            </div>
+            <!-- dòng này để ví dụ cho phần bên CSS -->
+            <!-- <div style="display: flex; justify-content: center;">
+                <p>Left content</p>
+                <p>Middle content</p>
+                <p>Right content</p>
+            </div> -->
+            <!-- dòng này để ví dụ cho phần bên CSS -->
+            <!-- <div style="display: flex; justify-content: space-around;">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+            </div> -->
+
             <h1 id="title" class="color" title="Đây là tiêu đề"> 
             <!-- <h1 title="Đây là tiêu đề", style="color: red; font-size:large;">  -->
             <!-- title ở trong thẻ h1 là attribute nha, đừng nhầm lẫn với title F8-shop ở thẻ head, style, font-size là cách thứ 3 để
@@ -65,8 +101,10 @@
                 Tuy nhiên, trong hè 2023, anh quyết sang Chelsea để được đá chính nhiều hơn. Sau khi gia nhập với giá 50 triệu USD, Palmer chơi 11 trận và ghi bốn bàn, góp bốn kiến tạo cho CLB mới.
             </p>
             <img src="https://i1-thethao.vnecdn.net/2023/11/14/1789759643-1-1699915496-6749-1699915539.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=C-iiK43Hh3MkFx3IHuUwzQ" alt="Cole Palmer trong màu áo Chelsea" width="100%">
+            
+            <h5 style="display: flex; justify-content: center;">Hình ảnh Cole Palmer sút tung lưới đội bóng đội bạn, cụ thể là mancity há há há</h5>
 
-            <a href="https://fullstack.edu.vn/">Tới trang học lập trình zero to hero của F8</a>
+            <a href="https://fullstack.edu.vn/">Tới trang học lập trình của F8</a>
             <ul>
                 <li>HTML CSS là gì</li>
                 <li>Cài đặt môi trường</li>
@@ -99,8 +137,14 @@
                     </tr>
                 </tbody>
             </table>
-            <h3 class="third-heading">Chần chừ gì nữa mà không đăng ký, đăng ký ngay tại</h3>
-            <button>Đăng ký</button>
+            <div class="luaga" id="assign">
+                <h3 class="third-heading">Chần chừ gì nữa mà không đăng ký, đăng ký ngay tại</h3>
+                <button id="assignButton" style="color: #eb2c2c;">Đăng ký</button>
+            </div>
+        
+            <h6 class="author" id="note" title="Đây là tác giả, một người có đủ kiến thức, kinh nghiệm và trải nghiệm học html&css trong 7 ngày">
+                Phan Huy Nam
+            </h6>
         </div>
     </body>
 </html>

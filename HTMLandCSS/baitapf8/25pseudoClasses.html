@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">  <!-- hỗ trợ tiếng việt ở website, không có cái này thì viết nội dung ở body có thể gặp lỗi -->
+        <title>F8-shop</title>
+        <style>
+            html,body{
+                margin: 0;
+            }
+            .box{
+                width: 100%;
+                height: 120px;
+                background: rgb(190, 127, 157);
+            }
+            h1:hover{
+                /* hover là nếu di chuột vào dòng h1 thì nó sẽ hiện màu như trong định nghĩa là màu đỏ */
+                color: red;
+            }
+            /* .box:hover{ */
+                /* tương tự thì di chuột vào nó sẽ đổi màu như đã định nghĩa dưới đây */
+                /* background-color: #333; */
+            /* } */
+            .box:active{
+                /* hoặc dùng active cho phần này, nhấn vào box thì box sẽ đổi màu như đã định nghĩa ở dưới */
+                background-color: #eb2c2c;
+            }
+            .button:active{
+                color: aqua;
+            }
+            li:first-child{
+                color: forestgreen;
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+            li:last-child{
+                color: blueviolet;
+                font-size: 3rem;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <h1>Pseudo Classes</h1>
+        <ul>
+            <li>:root</li>
+            <li>:hover</li>
+            <li>:active</li>
+            <li>:first-child</li>
+            <li>:last-child</li>
+        </ul>
+        <button class="button">button nhấn vào sẽ đổi màu</button>
+    </body>
+</html>

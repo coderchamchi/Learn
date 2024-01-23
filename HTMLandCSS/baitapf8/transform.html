@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">  <!-- hỗ trợ tiếng việt ở website, không có cái này thì viết nội dung ở body có thể gặp lỗi -->
+        <title>F8-shop</title>
+        <style>
+            .boxed{
+                width: 5rem;
+                height: 5rem;
+                background-color:red;
+                /* transform: scaleX(2); */
+                /* cái này để tăng gấp đôi kích thước của boxed về chiều ngang */
+                /* transform: scaleY(2); */
+                /* cái này để tăng gấp đôi kích thước của boxed về chiều dọc */
+                /* transform: scaleX(2) scaleY(2);*/
+                /* 2 cái trên viết tách ra 2 dòng thì chỉ có thể tăng 1 trong 2, còn muốn tăng cả dọc với ngang thì viết thế này */
+                /* transform: scale(2, 2); */
+                /* hoặc thế này */
+                /* transform: rotate(45deg); */
+                /* xoay khối này sang phải 45 độ */
+                /* transform: translateX(50%); */
+                /* đẩy khối sang bên phải với khoảng cách bằng 50% kích thước chiếu rộng của nó là 2,5rem, đẩy sang trái thì là -50% */
+                /* transform: translateY(50%); */
+                /*tương tự như trên thì đây là đẩy xuống dưới, cũng chỉ hoạt động 1 trong 2 */
+                transform: translateX(50%) translateY(50%);
+                /* để đẩy cả 2 thì dùng cái này */
+                transform: skewX(-30deg) skewY(-30deg);
+                /* 
+                skewX(angle): Xoay phần tử một góc angle theo trục X.
+                skewY(angle): Xoay phần tử một góc angle theo trục Y.
+                skewX(-30deg) xoay phần tử ở trục X với góc -30 độ, và skewY(-30deg) xoay phần tử ở trục Y với góc -30 độ. 
+                Kết quả là phần tử sẽ có hình dạng bị nghiêng cả về phía trái và phía trên.Ví dụ, nếu bạn áp dụng transform:
+                skewX(-30deg); cho một hình vuông, nó sẽ trở thành một hình chữ nhật nghiêng theo trục X. Nếu bạn áp dụng cả 
+                skewY(-30deg); nữa, thì hình chữ nhật sẽ nghiêng cả theo trục X và trục Y,tạo ra một hình dạng hơi giống hình thang. 
+                */
+                
+            }
+
+            
+                            
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="boxed">
+                
+            </div>
+        </div>
+    </body>
+</html>
