@@ -1,5 +1,6 @@
 html{
     font-size: 62.5%;
+    background-color: rgb(231, 230, 230);
 }
 
 *{
@@ -40,6 +41,58 @@ button{
     width: 30rem;
     text-align: center;
     
+}
+.nav{
+    height: 7rem;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list{
+    padding-left: 0;
+    margin: auto 2rem;
+}
+.nav-item{
+    color: #fff;
+    list-style: none;
+    margin: 0 1rem;
+    display: inline-block;    
+}
+.form-container{
+    height: 5rem;
+    background-color: #fff;
+    padding: 7rem;
+    margin: 5rem 10rem 5rem 10rem;
+    display: flex;
+    position: relative;
+
+}
+.form{
+    margin: auto;
+    width: 120rem;
+    position: absolute;
+    transform: translateY(-20%);
+}
+.form_row{
+    padding: 1rem 0;
+    display: flex;
+    
+}
+.form__label{
+    min-width: 10rem;
+}
+.form__input{
+    flex: 1;
+    /* set flex bằng 1 để nó tự chiếm hết chiều dài còn lại của th cha nó */
+}
+.boxvidu{
+    background-color: red;
+    height: 5rem;
+}
+.boxvidu2{
+    background-color: gray; 
+    margin: auto;
+    height: 1rem;
 }
 .test{
     padding: 2rem; 

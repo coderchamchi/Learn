@@ -33,16 +33,8 @@ public class Distinguish_NguyenAm_PhuAm {
         StringBuilder stringBuilderFalse = new StringBuilder(" Vậy nên nó là phụ âm nhé ^^");
         if (c >= 'A' && c <= 'Z') {
             switch (c) {
-                case 'U':
-                case 'E':
-                case 'O':
-                case 'A':
-                case 'I':
-                    System.out.println(stringBuilder.append(stringBuilderTrue));
-                    break;
-                default:
-                    System.out.println(stringBuilder.append(stringBuilderFalse));
-                    break;
+                case 'U', 'E', 'O', 'A', 'I' -> System.out.println(stringBuilder.append(stringBuilderTrue));
+                default -> System.out.println(stringBuilder.append(stringBuilderFalse));
             }
             return true;
         }
